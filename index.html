@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canales de TV en Vivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Canales de TV en Vivo</h1>
+    <div class="channel-list">
+        <div class="channel" data-video-id="ocFG3yor--M">
+            <img class="thumbnail" src="https://img.youtube.com/vi/ocFG3yor--M/0.jpg" alt="Canal 1">
+            <p>La Nacion +</p>
+        </div>
+        <div class="channel" data-video-id="cb12KmMMDJA">
+            <img class="thumbnail" src="https://img.youtube.com/vi/cb12KmMMDJA/0.jpg" alt="Canal 2">
+            <p>TN</p>
+        </div>
+        <div class="channel" data-video-id="sFZe_RPnNSo">
+            <img class="thumbnail" src="https://img.youtube.com/vi/sFZe_RPnNSo/0.jpg" alt="Canal 2">
+            <p>El 12 TV</p>
+        </div>
+        <div class="channel" data-video-id="NdQSOItOQ5Y">
+            <img class="thumbnail" src="https://img.youtube.com/vi/NdQSOItOQ5Y/0.jpg" alt="Canal 2">
+            <p>C5N</p>
+        </div>
+        <div class="channel" data-video-id="0eA-D1S7jRE">
+            <img class="thumbnail" src="https://img.youtube.com/vi/0eA-D1S7jRE/0.jpg" alt="Canal 2">
+            <p>Canal Rural</p>
+        </div>
+        <!-- Agrega más canales según sea necesario -->
+    </div>
+    <div id="video-container" class="hidden">
+        <button id="close-button">X</button>
+        <iframe id="video" width="800" height="600" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch((error) => {
+                console.log('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+</body>
+</html>

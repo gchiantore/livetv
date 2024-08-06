@@ -1,7 +1,10 @@
 /* Estilo general */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Exo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
     background-color: #141414;
     color: #ffffff;
 }

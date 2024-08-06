@@ -49,6 +49,12 @@ h1 {
     margin: 0;
 }
 
+.channel.selected {
+    border-radius: 10px;
+    transform: scale(1.09);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
 /* Hover en cada canal */
 .channel:hover {
     transform: scale(1.05);
